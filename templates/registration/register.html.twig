@@ -6,14 +6,14 @@
 <div class="page">
 	<div class="form-register-page">
 		<div class="form-container">
-			<h2 id="sign">Register</h2>
+			<h2 id="sign">Inscription</h2>
 		
 			{{ form_errors(registrationForm) }}
 
 			{{ form_start(registrationForm) }}
 			
 				<div class="label"> 
-					{{ form_label(registrationForm.firstname) }}
+					{{ form_label(registrationForm.firstname, "Prénom" ) }}
 				</div>
 			
 				<div class="field">
@@ -21,15 +21,15 @@
 				</div>
 		
 				<div class="label">
-					{{ form_label(registrationForm.lastname) }}
+					{{ form_label(registrationForm.lastname, "Nom")}}
 				</div>
 
 				<div class="field">
-					{{ form_widget(registrationForm.lastname) }}
+					{{ form_widget(registrationForm.lastname)}}
 		
 				</div>
 				<div class="label">
-					{{ form_label(registrationForm.email) }}
+					{{ form_label(registrationForm.email,"Email") }}
 				</div>
 			
 				<div class="field">
@@ -37,7 +37,7 @@
 				</div>
 			
 				<div class="label">
-					{{ form_label(registrationForm.address) }}
+					{{ form_label(registrationForm.address, "Adresse") }}
 				</div>
 
 				<div class="field">
@@ -45,7 +45,7 @@
 				</div>
 			
 				<div class="label">
-					{{ form_label(registrationForm.zipcode) }}
+					{{ form_label(registrationForm.zipcode,"Code postal") }}
 				</div>
 
 				<div class="field">
@@ -53,7 +53,7 @@
 				</div>
 
 				<div class="label">
-					{{ form_label(registrationForm.city) }}
+					{{ form_label(registrationForm.city,"Ville") }}
 				</div>
 			
 				<div class="field">	
@@ -61,14 +61,17 @@
 				</div>
 			
 				<div class="label">
-					{{ form_label(registrationForm.plainPassword, "Password") }}
+					{{ form_label(registrationForm.plainPassword, "Mot de passe")}}
 				</div>
 				<div class="field">
 					{{ form_widget(registrationForm.plainPassword) }}
 				</div>
-				<div class="label">	
-					{{ form_row(registrationForm.RGPDConsent) }}
+				
+				<div id="rgpd">
+					{{ form_widget(registrationForm.RGPDConsent) }}
+					<label>Vous acceptez la RGPD</label>
 				</div>
+				
 				<div class="button-container">
 					<button type="submit">Register</button>
 				</div>
@@ -78,4 +81,3 @@
 	</div>
 </div>
 {% endblock %}
-

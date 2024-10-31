@@ -301,6 +301,30 @@ body {
     gap: 0.5rem;
 }
 
+
+
+
+#rgpd {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 1rem;
+}
+
+#rgpd input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+}
+
+#rgpd label {
+    font-weight: bold;
+}
+
+
 .button-container {
     display: flex;
     justify-content: center;

@@ -1,49 +1,52 @@
-<div id='navbar'>
+<div id="navbar">
   <nav>
-    <div id='logo'>
+    <div id="logo">
+      <!-- Logo ici -->
     </div>
-    <div id='navlinks'>
+    <div id="navlinks">
       <ul>
         <li>
-			<a href='{{ path('app_main') }}'>Accueil</a>
+          <a href="{{ path("app_main") }}">Accueil</a>
         </li>
-          <!-- Ajout du lien vers le panier uniquement si l'utilisateur est connecté -->
+        {% if app.user %}
           <li>
-            <span id='cart-counter'>
-            </span>
-            <span id='cart-total'>
-            </span>
+            <span id='cart-counter'></span>
+            <span id='cart-total'></span>
           </li>
+        {% endif %}
       </ul>
     </div>
-      <div id='register'>
-        <ul>
+    <div id="register">
+      <ul>
+        {% if app.user %}
           <li>
-			<a href='{{ path('app_register') }}'>Inscription</a>
+            <span> Bienvenue, {{ app.user.firstname }} </span>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ path("app_register") }}">Inscription</a>
           </li>
           <li>
-		    <a href='{{ path('app_login') }}'>Connexion</a>
-           </li>
-        </ul>
-      </div>
-    <!-- quand l'utilisateur est connecté -->
-      <div id='dropdown_menu'>
-        <input type='checkbox' id='dropdown_toggle'>
-        <label for='dropdown_toggle'>
-          <div id='dropdown_menu_image'>
+            <a href="{{ path("app_login") }}">Connexion</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+    {% if app.user %}
+      <div id="dropdown_menu">
+        <input type="checkbox" id="dropdown_toggle">
+        <label for="dropdown_toggle">
+          <div id="dropdown_menu_image">
             <!-- Image pour le menu déroulant -->
           </div>
         </label>
         <ul>
           <li>
-            link 
+            <a href="{{ path("app_logout") }}">Déconnexion</a>
           </li>
-          <li>
-            link 
-          </li>
+          <li>Link 2</li>
         </ul>
       </div>
+    {% endif %}
   </nav>
 </div>
-
-

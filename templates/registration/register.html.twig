@@ -3,76 +3,78 @@
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
-<div class="form-register-page">
-	<div class="form-container">
-		<h2>Register</h2>
+<div class="page">
+	<div class="form-register-page">
+		<div class="form-container">
+			<h2 id="sign">Register</h2>
 		
-		{{ form_errors(registrationForm) }}
+			{{ form_errors(registrationForm) }}
 
-		{{ form_start(registrationForm) }}
+			{{ form_start(registrationForm) }}
 			
-			<div class="label"> 
-				{{ form_label(registrationForm.firstname) }}
-			</div>
+				<div class="label"> 
+					{{ form_label(registrationForm.firstname) }}
+				</div>
 			
-			<div class="field">
-				{{ form_widget(registrationForm.firstname) }}
-			</div>
+				<div class="field">
+					{{ form_widget(registrationForm.firstname) }}
+				</div>
 		
-			<div class="label">
-				{{ form_label(registrationForm.lastname) }}
-			</div>
+				<div class="label">
+					{{ form_label(registrationForm.lastname) }}
+				</div>
 
-			<div class="field">
-				{{ form_widget(registrationForm.lastname) }}
-	
-			</div>
-			<div class="label">
-				{{ form_label(registrationForm.email) }}
-			</div>
-			
-			<div class="field">
-				{{ form_widget(registrationForm.email)}}
-			</div>
-			
-			<div class="label">
-				{{ form_label(registrationForm.address) }}
-			</div>
-
-			<div class="field">
-				{{ form_widget(registrationForm.address)}}
-			</div>
-			
-			<div class="label">
-				{{ form_label(registrationForm.zipcode) }}
-			</div>
-
-			<div class="field">
-				{{ form_widget(registrationForm.zipcode) }}
-			</div>
-
-			<div class="label">
-				{{ form_label(registrationForm.city) }}
-			</div>
-			
-			<div class="field">	
-				{{ form_widget(registrationForm.city) }}
-			</div>
-			
-			<div class="label">
-				{{ form_label(registrationForm.plainPassword, "Password") }}
-			</div>
-			<div class="field">
-				{{ form_widget(registrationForm.plainPassword) }}
-			</div>
-				
-			{{ form_row(registrationForm.RGPDConsent) }}
-			
-			<div class="button-container">
-				<button type="submit">Register</button>
-			</div>
+				<div class="field">
+					{{ form_widget(registrationForm.lastname) }}
 		
-		{{ form_end(registrationForm) }}
+				</div>
+				<div class="label">
+					{{ form_label(registrationForm.email) }}
+				</div>
+			
+				<div class="field">
+					{{ form_widget(registrationForm.email)}}
+				</div>
+			
+				<div class="label">
+					{{ form_label(registrationForm.address) }}
+				</div>
+
+				<div class="field">
+					{{ form_widget(registrationForm.address)}}
+				</div>
+			
+				<div class="label">
+					{{ form_label(registrationForm.zipcode) }}
+				</div>
+
+				<div class="field">
+					{{ form_widget(registrationForm.zipcode) }}
+				</div>
+
+				<div class="label">
+					{{ form_label(registrationForm.city) }}
+				</div>
+			
+				<div class="field">	
+					{{ form_widget(registrationForm.city) }}
+				</div>
+			
+				<div class="label">
+					{{ form_label(registrationForm.plainPassword, "Password") }}
+				</div>
+				<div class="field">
+					{{ form_widget(registrationForm.plainPassword) }}
+				</div>
+				<div class="label">	
+					{{ form_row(registrationForm.RGPDConsent) }}
+				</div>
+				<div class="button-container">
+					<button type="submit">Register</button>
+				</div>
+		
+			{{ form_end(registrationForm) }}
+		</div>
 	</div>
 </div>
 {% endblock %}

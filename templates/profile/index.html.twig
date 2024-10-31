@@ -1,0 +1,13 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    {% if user %} 
+        <h1>Bonjour, {{ user.firstname|capitalize }} !</h1>
+    {% else %}
+        <p>Utilisateur non connecté.</p>
+    {% endif %}
+{% endblock %}
+

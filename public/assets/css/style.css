@@ -183,10 +183,10 @@ body {
 #content {
 	width: auto;
 	height: 100%;
-	margin: 1em;
+	margin: 2em;
 	padding: 1em;
 	background-color: var(--background-color-card);
-	border-radius: 10px;
+	border-radius: 1em;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -201,7 +201,7 @@ body {
 
 #text-container {
 	flex: 1;
-	padding: 2em;
+	padding: 1em;
 	background-color: #d8d4ca;
 	border-radius: 5px;
 }
@@ -215,13 +215,32 @@ body {
     margin-bottom: 1em;
 }
 
-#img-container {
-	width: 57em;
+
+#product-link { 
+	display: flex;
+    justify-content: center;
 }
 
-#img-container img {
-	
-	width: 100%;
+#product-link a {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    font-weight: bold;
+    color: var(--color-text);
+    background-color: var(--background-color-button); /* Couleur principale du bouton */
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+#img-container {
+	width: 50%; 
+	height: 100%;
+}
+
+#img-container img {	
+	width: 57em; 
 	border-radius: 5px;
 }
 
@@ -351,4 +370,5 @@ button[type="submit"]:active {
     background-color: #blue;
     transform: translateY(0);
 }
+
 

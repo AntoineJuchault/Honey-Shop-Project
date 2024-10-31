@@ -20,8 +20,8 @@
       <ul>
         {% if app.user %}
           <li>
-            <span> Bienvenue, {{ app.user.firstname }} </span>
-          </li>
+			<a href="{{ path('app_profile') }}">Bienvenue, {{ app.user.firstname|capitalize }}</a>
+		  </li>
         {% else %}
           <li>
             <a href="{{ path("app_register") }}">Inscription</a>

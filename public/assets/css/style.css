@@ -246,6 +246,37 @@ body {
 
 
 
+#text-inner-container {
+	width: auto;
+	height: 100%;
+	margin: 2em;
+	padding: 1em;
+	background-color: var(--background-color-card);
+	border-radius: 1em;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#title-history {
+	display: flex;
+	justify-content: center;
+
+
+}
+#text-inner-block {
+	flex: 1;
+	padding: 1em;
+	background-color: #d8d4ca;
+	border-radius: 5px;
+}
+
+
+
+
+
+
+
 
 .form-register-page {
     display: flex;

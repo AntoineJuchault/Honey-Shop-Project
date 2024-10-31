@@ -80,6 +80,38 @@ body {
   	border-radius: 6px;
 }
 
+/* (liens affichés lorsque l'utilisateur n'est pas connecté) */
+#register {
+  	display: flex;
+}
+
+#register ul {
+  	list-style-type: none;
+  	margin: 0;
+ 	padding: 0;
+  	display: flex;
+	font-size: 1em;
+}
+
+#register ul li {
+ 	 margin-left: 30px;
+}
+
+#register ul li a {
+  	text-decoration: none;
+  	color: white;
+  	padding: 6px 10px;
+  	transition: background-color 1.3s ease;
+}
+
+#register ul li a:hover {
+  	background-color: #575758;
+  	border-radius: 6px;
+}
+
+
+
+
 /* Dropdown menu */
 #dropdown_menu {
   	position: relative;
@@ -142,37 +174,6 @@ body {
 #dropdown_toggle:checked + label + ul {
   	display: block;
 }
-
-/* Register links (liens affichés lorsque l'utilisateur n'est pas connecté) */
-#register {
-  	display: flex;
-	margin-right: 10px;
-}
-
-#register ul {
-  	list-style-type: none;
-  	margin: 0;
- 	padding: 0;
-  	display: flex;
-	font-size: 1em;
-}
-
-#register ul li {
- 	 margin-left: 20px;
-}
-
-#register ul li a {
-  	text-decoration: none;
-  	color: white;
-  	padding: 6px 10px;
-  	transition: background-color 1.3s ease;
-}
-
-#register ul li a:hover {
-  	background-color: #575758;
-  	border-radius: 6px;
-}
-
 
 
 /* HOMEPAGE */

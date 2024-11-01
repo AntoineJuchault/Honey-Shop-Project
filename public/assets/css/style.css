@@ -23,9 +23,6 @@ body {
 	color: var(--color-text);
 }
 
-
-
-
 /* Style général pour le navbar */
 #navbar {
 	background-color: #242424;
@@ -176,6 +173,9 @@ body {
 }
 
 
+
+
+
 /* HOMEPAGE */
 
 
@@ -209,6 +209,7 @@ body {
 #text-container {
 	flex: 1;
 	height: 100%;
+	widht: 100%;
 	padding: 2em;
 	background-color: #626262;
 	border-radius: 5px;
@@ -246,18 +247,82 @@ body {
 
 
 
-#img-container {
+#img-container {	
 	width: auto; 
 	height: 100%;
+	
 }
 
-#img-container img {	
-	width: 60em; 
+#img-container img {
+	width: 60em;
+	height: auto;
 	border-radius: 5px;
 }
 
 
-#history-container {
+
+
+#history-block {
+    width: auto;
+    height: 100%;
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--background-color-card);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+#title-history-block {
+    display: flex;
+    justify-content: center;
+    color: var(--color-text);
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+#text-image-inner-block {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+#image-inner-block {
+	width: auto; 
+	height: 100%;
+}
+
+
+
+#image-inner-block img {
+    width: 57em; /* Ajuste la largeur selon ton besoin */
+    height: auto;
+    border-radius: 5px;
+}
+
+.history-text {
+	flex: 1;
+	height: 100%;
+	widht: 100%;
+	padding: 2.5em;
+	background-color: #626262;
+	border-radius: 5px;	
+}
+
+.history-text p {
+	color: var(--color-text);
+    line-height: 1.6;
+    font-size: 1.1em;
+    font-family: "Georgia", serif;
+    text-align: justify;
+}
+
+
+
+/* product page */
+#products-content {
 	width: auto;
 	height: 100%;
 	margin: 1em;
@@ -265,37 +330,44 @@ body {
 	background-color: var(--background-color-card);
 	border-radius: 10px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	margin-bottom: 2em; /* Ajoute un espace en bas du bloc */
+	margin-bottom: 2em;
 }
 
-#title-history {
+
+#title-products {
+    display: flex;
+    justify-content: center;
+    color: var(--color-text);
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+
+
+#products-card-content {
 	display: flex;
-	justify-content: center;
-	color: var(--color-text);
-	font-size: 3em;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0.5em 0;
+	gap: 20px;
+	width: 90%;
+	background-color:var(--background-color-body);
+	margin: 0 auto;
 }
 
-#text-inner-block {
-	width: auto;
-	height: 100%;
-	margin: 2em; /* Ajout de marge autour pour plus d'espace */
-	padding: 2em;
-	background-color: #383838;
-	border-radius: 1em;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 
-}
-#text-inner-block {
-	flex: 1;
-	padding: 1em;
-	color: var(--color-text);
-	background-color: #383838;
-	border-radius: 5px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .form-register-page {
@@ -411,7 +483,4 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
-
-
-
 
